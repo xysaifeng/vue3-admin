@@ -1,9 +1,18 @@
 import { createApp } from "vue"
 import "./style.css"
 import App from "./App.vue"
+import router from "./router"
 
-createApp(App).mount("#app")
+const app = createApp(App)
 
-// const a = 1
+app.use(router)
 
-console.log("")
+app.mount("#app")
+
+app.config.globalProperties.getNames = function (key: string) {
+  return key
+}
+
+app.config.errorHandler = (err, vm, info) => {
+  console.log(err, vm, info, "-------errorHandler")
+}

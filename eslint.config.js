@@ -26,7 +26,8 @@ export default [
       "no-debugger": "warn",
       "no-unused-vars": "error",
       "vue/no-unused-components": "warn",
-      semi: ["error"] // error:末尾要加分号
+      semi: ["error"], // error:末尾要加分号
+      "vue/multi-word-component-names": ["off"]
     }
   },
   prettierRecommended // 当eslint和prettier冲突时，以prettier为准
